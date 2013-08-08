@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if type == "csv" %}
+    <table class="table table-striped">
+    {% for row in content %}
+      <tr>
+      {% for colum in row %}
+        <td>{{ colum }}</td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+    </table>
+  {% elif type == "txt" %}
+    <code>
+    {% for row in content %}
+      {{ row }}
+    {% endfor %}
+    </code>
+  {% else %}
+  {% endif %}
+
+  <script>
+    $(document).ready(function(){
+      $.get('api/{{ id }}', function (response) {
+        html = '';
+        if (response.type === 'csv') {
+
+        } else if (response.type === 'txt') {
+
+        } else {
+
+        }
+        $('#files').append(html);
+      });
+    });
+  </script>
+{% endblock %}

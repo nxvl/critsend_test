@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Large File Uploader</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+  <script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-inverse">
+  <a class="navbar-brand" href="/">Large File Uploader</a>
+  <ul class="nav navbar-nav pull-right">
+    <li><a href="/">Browse</a></li>
+    <li><a data-toggle="modal" href="#myModal">Upload</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
